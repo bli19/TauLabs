@@ -617,7 +617,6 @@ GUIConfigDataUnion VehicleConfigurationHelper::getGUIConfigData()
 {
     GUIConfigDataUnion configData;
 
-    SystemSettings *systemSettings = SystemSettings::GetInstance(m_uavoManager);
     Q_ASSERT(systemSettings);
 
     for (int i = 0; i < (int)(SystemSettings::AIRFRAMECATEGORYSPECIFICCONFIGURATION_NUMELEM); i++) {
