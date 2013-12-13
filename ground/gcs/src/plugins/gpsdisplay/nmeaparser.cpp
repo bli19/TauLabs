@@ -34,7 +34,6 @@
 #include <QWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include "stdint.h"
 
 // Message Codes
 #define NMEA_NODATA    0       // No data. Packet not available, bad, or not decoded
