@@ -616,7 +616,6 @@ void VehicleConfigurationHelper::setupTriCopter()
 GUIConfigDataUnion VehicleConfigurationHelper::getGUIConfigData()
 {
     GUIConfigDataUnion configData;
-
     Q_ASSERT(systemSettings);
 
     for (int i = 0; i < (int)(SystemSettings::AIRFRAMECATEGORYSPECIFICCONFIGURATION_NUMELEM); i++) {
@@ -630,7 +629,7 @@ void VehicleConfigurationHelper::setupQuadCopter()
 {
     mixerChannelSettings channels[10];
     GUIConfigDataUnion guiSettings = getGUIConfigData();
-    SystemSettings::AirframeTypeOptions frame;
+    SystemSettings::AirframeTypeOptions frame = SystemSettings::AIRFRAMETYPE_QUADP;
 
     switch (m_configSource->getVehicleSubType()) {
     case VehicleConfigurationSource::MULTI_ROTOR_QUAD_PLUS:
@@ -720,7 +719,7 @@ void VehicleConfigurationHelper::setupHexaCopter()
 {
     mixerChannelSettings channels[10];
     GUIConfigDataUnion guiSettings = getGUIConfigData();
-    SystemSettings::AirframeTypeOptions frame;
+    SystemSettings::AirframeTypeOptions frame = SystemSettings::AIRFRAMETYPE_HEXA;
 
     switch (m_configSource->getVehicleSubType()) {
     case VehicleConfigurationSource::MULTI_ROTOR_HEXA:
@@ -899,7 +898,7 @@ void VehicleConfigurationHelper::setupOctoCopter()
 {
     mixerChannelSettings channels[10];
     GUIConfigDataUnion guiSettings = getGUIConfigData();
-    SystemSettings::AirframeTypeOptions frame;
+    SystemSettings::AirframeTypeOptions frame = SystemSettings::AIRFRAMETYPE_OCTO;
 
     switch (m_configSource->getVehicleSubType()) {
     case VehicleConfigurationSource::MULTI_ROTOR_OCTO:

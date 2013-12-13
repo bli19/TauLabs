@@ -1044,10 +1044,10 @@ void ConfigInputWidget::setTxMovement(txMovements movement)
 void ConfigInputWidget::moveTxControls()
 {
     QTransform trans;
-    QGraphicsItem * item;
-    txMovementType move;
-    int limitMax;
-    int limitMin;
+    QGraphicsItem * item = NULL;
+    txMovementType move = vertical;
+    int limitMax = 0;
+    int limitMin = 0;
     static bool auxFlag=false;
     switch(currentMovement)
     {
